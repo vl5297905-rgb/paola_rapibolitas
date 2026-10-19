@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rapibolitas – Bolitas de Papa con Queso</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-brand" href="#inicio">
+    <div class="nav-brand-icon">🧀</div>
+    <span class="nav-brand-text"><span>Rapi</span>bolitas</span>
+
+    <!-- SLIDE 1: Bolitas de Papa con Queso -->
+    <div class="slide s1">
+      <div class="slide-glow" style="width:500px;height:500px;background:#4A1D8F;top:-100px;right:10%"></div>
+      <div class="slide-content">
+        <div class="slide-eyebrow"><span class="eyebrow-line"></span>Especialidad de la casa<span class="eyebrow-line"></span></div>
+        <h1 class="slide-title">Bolitas de <em>Papa</em><br>con Queso</h1>
+        <p class="slide-desc">Suaves por fuera, cremosas y llenas de queso por dentro. Cada bocado es una explosión de sabor que te hará volver.</p>
+        <div class="slide-price">$1.50 <span>/ porción</span></div>
+        <div class="slide-actions">
+          <button class="btn-gold" onclick="addToCart('Bolitas de Papa con Queso','1.50','🧆')">+ Agregar al carrito</button>
+          <a href="#menu" class="btn-ghost">Ver menú completo</a>
+        </div>
+      </div>
+      <div class="slide-accent">
+        <div class="slide-accent-inner">
+          <span class="food-visual">🧆</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 2: Rapiditas -->
+    <div class="slide s2">
+      <div class="slide-glow" style="width:450px;height:450px;background:#6B35B5;bottom:-80px;right:15%"></div>
+      <div class="slide-content">
+        <div class="slide-eyebrow"><span class="eyebrow-line"></span>El antojo perfecto<span class="eyebrow-line"></span></div>
+        <h1 class="slide-title"><em>Rapiditas</em><br>Mixtas</h1>
+        <p class="slide-desc">Una mezcla irresistible con nuestras rapiditas. Crujientes, sabrosas y perfectas para cualquier momento del día.</p>
+        <div class="slide-price">$1.50 <span>/ porción</span></div>
+        <div class="slide-actions">
+          <button class="btn-gold" onclick="addToCart('Rapiditas Mixtas','1.50','🥙')">+ Agregar al carrito</button>
+          <a href="#combos" class="btn-ghost">Ver combos</a>
+        </div>
+      </div>
+      <div class="slide-accent">
+        <div class="slide-accent-inner">
+          <span class="food-visual">🥙</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 3: Refresco de Gaseosa -->
+    <div class="slide s3">
+      <div class="slide-glow" style="width:400px;height:400px;background:#C9A84C;top:50px;right:20%"></div>
+      <div class="slide-content">
+        <div class="slide-eyebrow"><span class="eyebrow-line"></span>Refrescante y frío<span class="eyebrow-line"></span></div>
+        <h1 class="slide-title">Refresco de<br><em>Gaseosa</em></h1>
+        <p class="slide-desc">Bien frío, bien burbujeante. El complemento ideal que acompaña perfectamente tus platillos favoritos de Rapibolitas.</p>
+        <div class="slide-price">$0.50 <span>/ vaso grande</span></div>
+        <div class="slide-actions">
+          <button class="btn-gold" onclick="addToCart('Refresco de Gaseosa','0.50','🥤')">+ Agregar al carrito</button>
+          <a href="#menu" class="btn-ghost">Nuestro menú</a>
+        </div>
+      </div>
+      <div class="slide-accent">
+        <div class="slide-accent-inner">
+          <span class="food-visual">🥤</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 4: Horchata -->
+    <div class="slide s4">
+      <div class="slide-glow" style="width:420px;height:420px;background:#9B6DDB;bottom:-60px;right:8%"></div>
+      <div class="slide-content">
+        <div class="slide-eyebrow"><span class="eyebrow-line"></span>Bebida tradicional<span class="eyebrow-line"></span></div>
+        <h1 class="slide-title">Horchata<br><em>Artesanal</em></h1>
+        <p class="slide-desc">Cremosa, refrescante y con todo el sabor de la tradición. Nuestra horchata es el toque perfecto para tu experiencia Rapibolitas.</p>
+        <div class="slide-price">$0.50 <span>/ vaso grande</span></div>
+        <div class="slide-actions">
+          <button class="btn-gold" onclick="addToCart('Horchata Artesanal','0.50','🥛')">+ Agregar al carrito</button>
+          <a href="#menu" class="btn-ghost">Ver bebidas</a>
+        </div>
+      </div>
+      <div class="slide-accent">
+        <div class="slide-accent-inner">
+          <span class="food-visual">🥛</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 5: Combo Rapiditas + Gaseosa -->
+    <div class="slide s5">
+      <div class="slide-glow" style="width:480px;height:480px;background:#4A1D8F;top:-80px;right:5%"></div>
+      <div class="slide-content">
+        <div class="slide-eyebrow"><span class="eyebrow-line"></span>Combo Estrella<span class="eyebrow-line"></span></div>
+        <h1 class="slide-title"><em>Combo 3</em><br>Rapiditas<br>+ Gaseosa</h1>
+        <p class="slide-desc">Las mejores rapiditas mixtas acompañadas del refresco de gaseosa más frío. La combinación perfecta para disfrutar al máximo.</p>
+        <div class="slide-price">$8.00 <span>/ combo completo</span></div>
+        <div class="slide-actions">
+          <button class="btn-gold" onclick="addToCart('2 Rapiditas + Gaseosa','2.00','🥙🥤')">+ Pedir este combo</button>
+          <a href="#combos" class="btn-ghost">Todos los combos</a>
+        </div>
+      </div>
+      <div class="slide-accent">
+        <div class="slide-accent-inner" style="display:flex;flex-direction:column;align-items:center;gap:-.5rem">
+          <span class="food-visual" style="font-size:clamp(5rem,10vw,9rem);animation-delay:0s">🥙</span>
+          <span class="food-visual" style="font-size:clamp(4rem,8vw,7rem);animation-delay:.5s;margin-top:-2rem">🥤</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 6: Combo Bolitas + Horchata -->
+    <div class="slide s6">
+      <div class="slide-glow" style="width:450px;height:450px;background:#C9A84C;top:100px;right:10%"></div>
+      <div class="slide-content">
+        <div class="slide-eyebrow"><span class="eyebrow-line"></span>Combo Favorito<span class="eyebrow-line"></span></div>
+        <h1 class="slide-title"><em>Combo 2</em><br>Bolitas de Queso<br>+ Horchata</h1>
+        <p class="slide-desc">Las cremosas bolitas de papa con queso derretido, maridadas con nuestra horchata artesanal. El dúo más querido de nuestros clientes.</p>
+        <div class="slide-price">$8.50 <span>/ combo completo</span></div>
+        <div class="slide-actions">
+          <button class="btn-gold" onclick="addToCart('Combo 2 – Bolitas + Horchata','8.50','🧆🥛')">+ Pedir este combo</button>
+          <a href="#combos" class="btn-ghost">Ver todos</a>
+        </div>
+      </div>
+      <div class="slide-accent">
+        <div class="slide-accent-inner" style="display:flex;flex-direction:column;align-items:center">
+          <span class="food-visual" style="font-size:clamp(5rem,10vw,9rem);animation-delay:0s">🧆</span>
+          <span class="food-visual" style="font-size:clamp(4rem,8vw,7rem);animation-delay:.6s;margin-top:-2rem">🥛</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 7: Pinchos de Chocolate -->
+    <div class="slide s7">
+      <div class="slide-glow" style="width:430px;height:430px;background:#9B6DDB;bottom:-60px;right:12%"></div>
+      <div class="slide-content">
+        <div class="slide-eyebrow"><span class="eyebrow-line"></span>El dulce final<span class="eyebrow-line"></span></div>
+        <h1 class="slide-title">Pinchos de<br><em>Chocolate</em><br>Fresa & Uva</h1>
+        <p class="slide-desc">El aperitivo dulce que completa tu experiencia. Fresas y uvas bañadas en chocolate, hechos con cariño para ti.</p>
+        <div class="slide-price">$0.75 <span>/ aperitivo</span></div>
+        <div class="slide-actions">
+          <button class="btn-gold" onclick="addToCart('Pinchos de Chocolate Fresa & Uva','0.75','🍡')">+ Agregar al carrito</button>
+          <a href="#menu" class="btn-ghost">Ver menú</a>
+        </div>
+      </div>
+      <div class="slide-accent">
+        <div class="slide-accent-inner">
+          <span class="food-visual">🍡</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Arrows -->
+  <button class="car-arrow car-prev" onclick="moveTo(current-1)" aria-label="Anterior">‹</button>
+  <button class="car-arrow car-next" onclick="moveTo(current+1)" aria-label="Siguiente">›</button>
+
+  <!-- Dots -->
+  <div class="car-dots" id="carDots"></div>
+
+  <!-- Counter -->
+  <div class="car-counter" id="carCounter"></div>
+
+  <!-- Progress bar -->
+  <div class="car-progress" id="carProgress"></div>
+</section>
+
+<!-- QUALITIES BAND -->
+<div class="qualities">
+  <div class="qualities-inner">
+    <div class="quality-item">
+      <div class="q-icon">🏆</div>
+      <div class="q-text"><h4>Ingredientes Frescos</h4><p>Seleccionados cada día</p></div>
+    </div>
+    <div class="quality-item">
+      <div class="q-icon">⚡</div>
+      <div class="q-text"><h4>Hecho al Momento</h4><p>Siempre caliente y fresco</p></div>
+    </div>
+    <div class="quality-item">
+      <div class="q-icon">💜</div>
+      <div class="q-text"><h4>Con Amor</h4><p>Cada detalle importa</p></div>
+    </div>
+    <div class="quality-item">
+      <div class="q-icon">📍</div>
+      <div class="q-text"><h4>Ideal para Compartir</h4><p>En familia o con amigos</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- MENU -->
+<section id="menu">
+  <div class="section-wrap">
+    <div class="sec-header">
+      <span class="sec-tag">Lo que preparamos</span>
+      <h2>Nuestro <em>Menú</em></h2>
+      <div class="gold-bar"></div>
+      <p>Todos nuestros productos están elaborados con ingredientes frescos y mucho amor</p>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-card">
+        <div class="mc-visual" style="background:linear-gradient(135deg,#EDE9F8,#D8CCF5)">🧆</div>
+        <div class="mc-body">
+          <span class="mc-badge badge-signature">Signature</span>
+          <h3>Bolitas de Papa con Queso</h3>
+          <p>Nuestro plato estrella. Suaves por fuera, con queso derretido por dentro. Una experiencia única en cada bocado.</p>
+          <div class="mc-footer">
+            <span class="mc-price">$1.50</span>
+            <button class="btn-add" onclick="addToCart('Bolitas de Papa con Queso','1.50','🧆')">+ Agregar</button>
+          </div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="mc-visual" style="background:linear-gradient(135deg,#F0EAF8,#E8D8F5)">🥙</div>
+        <div class="mc-body">
+          <span class="mc-badge badge-signature">Popular</span>
+          <h3>Rapiditas Mixtas con Bolitas</h3>
+          <p>La combinación perfecta entre rapiditas y nuestras deliciosas bolitas de queso. Sabor doble en cada pedido.</p>
+          <div class="mc-footer">
+            <span class="mc-price">$1.50</span>
+            <button class="btn-add" onclick="addToCart('Rapiditas Mixtas con Bolitas','1.50','🥙')">+ Agregar</button>
+          </div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="mc-visual" style="background:linear-gradient(135deg,#FFF5E0,#FFE9A0)">🥤</div>
+        <div class="mc-body">
+          <span class="mc-badge badge-bebida">Bebida</span>
+          <h3>Refresco de Gaseosa</h3>
+          <p>Bien frío y burbujeante. El complemento ideal para acompañar cualquier platillo de nuestro menú.</p>
+          <div class="mc-footer">
+            <span class="mc-price">$2.00</span>
+            <button class="btn-add" onclick="addToCart('Refresco de Gaseosa','0.50','🥤')">+ Agregar</button>
+          </div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="mc-visual" style="background:linear-gradient(135deg,#FDF5EC,#F5E6CF)">🥛</div>
+        <div class="mc-body">
+          <span class="mc-badge badge-bebida">Bebida</span>
+          <h3>Horchata Artesanal</h3>
+          <p>Tradicional, cremosa y refrescante. Preparada con nuestra receta especial para complementar tu antojo.</p>
+          <div class="mc-footer">
+            <span class="mc-price">$2.00</span>
+            <button class="btn-add" onclick="addToCart('Horchata Artesanal','0.50','🥛')">+ Agregar</button>
+          </div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="mc-visual" style="background:linear-gradient(135deg,#FCE7F0,#F9C0D5)">🍡</div>
+        <div class="mc-body">
+          <span class="mc-badge badge-aperitivo">Aperitivo</span>
+          <h3>Pinchos de Chocolate Fresa y Uva</h3>
+          <p>Deliciosos pinchos de fresa y uva bañados en chocolate. El dulce final perfecto para tu experiencia.</p>
+          <div class="mc-footer">
+            <span class="mc-price">$0.75</span>
+            <button class="btn-add" onclick="addToCart('Pinchos de Chocolate','0.75','🍡')">+ Agregar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMBOS -->
+<section id="combos">
+  <div class="section-wrap">
+    <div class="sec-header">
+      <span class="sec-tag">Ahorra más</span>
+      <h2>Nuestros <em>Combos</em></h2>
+      <div class="gold-bar"></div>
+      <p>La combinación perfecta al mejor precio. ¡Elige tu favorito!</p>
+    </div>
+    <div class="combos-grid">
+      <div class="combo-card">
+        <div class="combo-top">
+          <div class="combo-num cn1">1</div>
+          <h3>Rapibolitas + Refresco de Gaseosa</h3>
+        </div>
+        <div class="combo-emojis">🧆 <span style="color:var(--gold);font-size:1.5rem">+</span> 🥤</div>
+        <div class="combo-bottom">
+          <ul class="combo-items">
+            <li>Bolitas de papa con queso (porción)</li>
+            <li>Refresco de gaseosa grande</li>
+          </ul>
+          <div class="combo-footer">
+            <span class="combo-price">$2.00</span>
+            <button class="btn-combo" onclick="addToCart('2 Rapiditas + Gaseosa','2.00','🧆🥤')">Pedir</button>
+          </div>
+        </div>
+      </div>
+      <div class="combo-card">
+        <div class="combo-top">
+          <div class="combo-num cn2">2</div>
+          <h3>Rapibolitas + Horchata</h3>
+        </div>
+        <div class="combo-emojis">🧆 <span style="color:var(--gold);font-size:1.5rem">+</span> 🥛</div>
+        <div class="combo-bottom">
+          <ul class="combo-items">
+            <li>Bolitas de papa con queso (porción)</li>
+            <li>Horchata artesanal grande</li>
+          </ul>
+          <div class="combo-footer">
+            <span class="combo-price">$2.00</span>
+            <button class="btn-combo" onclick="addToCart('3 Bolitas de Papa con Queso + Gaseosa','2.00','🧆🥛')">Pedir</button>
+          </div>
+        </div>
+      </div>
+      <div class="combo-card">
+        <div class="combo-top">
+          <div class="combo-num cn3">3</div>
+          <h3>Rapiditas Mixtas + Gaseosa</h3>
+        </div>
+        <div class="combo-emojis">🥙 <span style="color:var(--gold);font-size:1.5rem">+</span> 🥤</div>
+        <div class="combo-bottom">
+          <ul class="combo-items">
+            <li>Rapiditas mixtas con bolitas de queso</li>
+            <li>Refresco de gaseosa grande</li>
+          </ul>
+          <div class="combo-footer">
+            <span class="combo-price">$2.00</span>
+            <button class="btn-combo" onclick="addToCart('2 Rapiditas + Gaseosa','2.00','🥙🥤')">Pedir</button>
+          </div>
+        </div>
+      </div>
+      <div class="combo-card">
+        <div class="combo-top">
+          <div class="combo-num cn4">4</div>
+          <h3>Rapiditas Mixtas + Horchata</h3>
+        </div>
+        <div class="combo-emojis">🥙 <span style="color:var(--gold);font-size:1.5rem">+</span> 🥛</div>
+        <div class="combo-bottom">
+          <ul class="combo-items">
+            <li>Rapiditas mixtas con bolitas de queso</li>
+            <li>Horchata artesanal grande</li>
+          </ul>
+          <div class="combo-footer">
+            <span class="combo-price">$2.00</span>
+            <button class="btn-combo" onclick="addToCart('3 Bolitas de Papa con Queso + Gaseosa','2.00','🥙🥛')">Pedir</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NOSOTROS -->
+<section id="nosotros">
+  <div class="section-wrap">
+    <div class="about-grid">
+      <div class="about-visual">
+        <div class="about-img-main">🧆</div>
+        <div class="about-badge-float">
+          <span class="abf-num">100%</span>
+          <span class="abf-label">Hecho con amor</span>
+        </div>
+      </div>
+      <div class="about-text">
+        <span class="sec-tag">Nuestra historia</span>
+        <h2>Sabor que <em>enamora</em><br>desde el primer bocado</h2>
+        <p>En Rapibolitas nacimos con una sola misión: llevar alegría a través de la comida. Cada bolita de papa con queso es preparada al momento, con ingredientes frescos y seleccionados, para que siempre disfrutes lo mejor.</p>
+        <p>Somos más que un negocio de comida; somos una experiencia de sabor que une a familias y amigos en torno a lo más delicioso y auténtico.</p>
+        <div class="about-stats">
+          <div class="astat"><h4>500+</h4><p>Clientes felices</p></div>
+          <div class="astat"><h4>4</h4><p>Combos únicos</p></div>
+          <div class="astat"><h4>100%</h4><p>Ingredientes frescos</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERÍA -->
+<section id="galeria">
+  <div class="section-wrap">
+    <div class="sec-header">
+      <span class="sec-tag">Nuestra galería</span>
+      <h2>Lo que hacemos con <em>amor</em></h2>
+      <div class="gold-bar"></div>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <span class="g-emoji">🧆</span>
+        <span class="g-label">Bolitas de Papa con Queso</span>
+      </div>
+      <div class="gallery-item">
+        <span class="g-emoji">🥙</span>
+        <span class="g-label">Rapiditas Mixtas</span>
+      </div>
+      <div class="gallery-item">
+        <span class="g-emoji">🥤</span>
+        <span class="g-label">Refresco de Gaseosa</span>
+      </div>
+      <div class="gallery-item">
+        <span class="g-emoji">🥛</span>
+        <span class="g-label">Horchata Artesanal</span>
+      </div>
+      <div class="gallery-item">
+        <span class="g-emoji">🍡</span>
+        <span class="g-label">Pinchos de Chocolate</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <div class="section-wrap">
+    <div class="sec-header">
+      <span class="sec-tag">Estamos para ti</span>
+      <h2>¡<em>Contáctanos</em>!</h2>
+      <div class="gold-bar"></div>
+      <p>Escríbenos y recibe tu pedido rápido y con amor</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="cc-icon">📲</div>
+        <h4>WhatsApp</h4>
+        <p>Escríbenos directamente para hacer tu pedido de forma rápida y sencilla</p>
+      </div>
+      <div class="contact-card">
+        <div class="cc-icon">📍</div>
+        <h4>Ubicación</h4>
+        <p>San Salvador, El Salvador<br>Pregúntanos por el punto de entrega más cercano</p>
+      </div>
+      <div class="contact-card">
+        <div class="cc-icon">🕐</div>
+        <h4>Horario de Atención</h4>
+        <p>Lunes a Domingo<br>10:00 AM – 9:00 PM</p>
+      </div>
+    </div>
+    <div class="contact-cta">
+      <a class="btn-whatsapp" href="https://wa.me/50368428856" target="_blank">
+        📲 Pedir por WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3><span>Rapi</span>bolitas</h3>
+        <p>Bolitas de papa con queso, hechas al momento con ingredientes frescos y mucho amor para ti.</p>
+        <div class="footer-socials" style="margin-top:1rem">
+          <a class="soc" href="#">📸</a>
+          <a class="soc" href="#">👤</a>
+          <a class="soc" href="#">🎵</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <a href="#inicio">Inicio</a>
+        <a href="#menu">Nuestro Menú</a>
+        <a href="#combos">Combos</a>
+        <a href="#galeria">Galería</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <div class="footer-col">
+        <h4>Productos</h4>
+        <a href="#menu">Bolitas de Papa con Queso</a>
+        <a href="#menu">Rapiditas Mixtas</a>
+        <a href="#menu">Refresco de Gaseosa</a>
+        <a href="#menu">Horchata Artesanal</a>
+        <a href="#menu">Pinchos de Chocolate</a>
+      </div>
+      <div class="footer-col">
+        <h4>Pedidos Rápidos</h4>
+        <p>1. Escríbenos por WhatsApp</p>
+        <p>2. Elige tus productos</p>
+        <p>3. ¡Recibe y disfruta!</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Rapibolitas. Todos los derechos reservados.</p>
+      <span class="footer-tagline">Hecho con amor, para ti</span>
+    </div>
+  </div>
+</footer>
+
+<!-- CART PANEL -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCartOutside(event)">
+  <div class="cart-panel">
+    <div class="cart-head">
+      <h2>🛒 Tu Pedido</h2>
+      <button class="cart-close" onclick="closeCart()">✕</button>
+    </div>
+    <div class="cart-body" id="cartBody"></div>
+    <div class="cart-foot">
+      <div class="cart-sub">
+        <span>Subtotal</span>
+        <strong id="cartTotal">$0.00</strong>
+      </div>
+      <button class="btn-checkout" onclick="checkout()">📲 Finalizar por WhatsApp</button>
+      <button class="btn-clear" onclick="clearCart()">Vaciar carrito</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
+ 
